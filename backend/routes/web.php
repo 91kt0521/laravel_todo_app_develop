@@ -24,3 +24,5 @@ Route::get('/home', function () {
 Route::get('/', function () {
     return view('boot_template/index');
 });
+
+Route::get('/index', 'HelloController@index');
