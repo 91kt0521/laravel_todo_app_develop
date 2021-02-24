@@ -26,12 +26,35 @@
         .box2 {
             background-color: gold;
         }
+
+        /* css でflexboxを使用する */
+        /* .test-flex {
+            display: flex;
+            justify-content: center;
+        } */
+        .box3 {
+            width: 100px;
+            height: 100px;
+            color: white;
+            padding: 5px;
+        }
     </style>
 
 </head>
 <body>
+
+    <div class="test-flex mt-5 bg-info d-flex justify-content-center">
+        <div class="box3 border border-3 bg-secondary">1</div>
+        <div class="box3 border border-3 bg-primary">2</div>
+        <div class="box3 border border-3 bg-secondary">3</div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="box3 border border-danger border-3 bg-info">
+        </div>
+    </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary m-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
     </button>
 
