@@ -27,7 +27,7 @@
             background-color: gold;
         }
 
-        /* css でflexboxを使用する */
+        /* css でflex-boxを使用する */
         /* .test-flex {
             display: flex;
             justify-content: center;
@@ -42,6 +42,37 @@
 
 </head>
 <body>
+
+
+    <!-- form用 -->
+    <div class="container mt-5">
+        <div class="row g-3 mt-3">
+            <div class="col">
+                <input type="text" class="form-control" name="first_name" placeholder="姓" aria-label="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="last_name" placeholder="名" aria-label="Last name">
+            </div>
+        </div>
+        <div class="form-check mt-3">
+            <input class="form-check-input" type="radio" name="job" id="job">
+            <label class="form-check-label" for="job">
+                会社員
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="job" id="job_2" checked>
+            <label class="form-check-label" for="job_2">
+                自営業
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="job" id="job_3" checked>
+            <label class="form-check-label" for="job_3">
+                学生
+            </label>
+        </div>
+    </div>
 
     <div class="test-flex mt-5 bg-info d-flex justify-content-center">
         <div class="box3 border border-3 bg-secondary">1</div>
@@ -128,7 +159,7 @@
         <img class="rounded mx-auto d-block" src="https://picsum.photos/200/200" alt="">
     </div>
 
-    <!-- js読み込み　bootstrarp5.0ではjqueryを使用しないらしい -->
+    <!-- js読み込み bootstrap 5.0ではjqueryを使用しないらしい -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
