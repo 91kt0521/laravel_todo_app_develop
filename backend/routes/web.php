@@ -18,11 +18,15 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/study', function () {
-    return view('study');
+    return view('samples/study');
+});
+
+Route::get('/sample', function () {
+    return view('samples/sample');
 });
 
 Route::get('/', function () {
     return view('boot_template/index');
 });
 
-Route::get('/index', 'HelloController@index');
+Route::get('/index', 'Sample\HelloController@index');

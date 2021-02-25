@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Sample;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class HelloController extends Controller
 {
@@ -11,6 +13,6 @@ class HelloController extends Controller
         $hello = 'Hello,World!';
         $hello_array = ['Hello', 'こんにちは', 'ニーハオ'];
 
-        return view('index', compact('hello'));
+        return view('samples.index', compact('hello'));
     }
 }
