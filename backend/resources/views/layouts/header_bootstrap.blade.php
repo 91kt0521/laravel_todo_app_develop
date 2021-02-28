@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg alert-danger alert-danger static-top">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="http://placehold.it/150x50?text=Laravel学習用" alt="Laravel学習用">
+            <strong class=text-dark>Laravel Sample</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,18 +10,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link text-dark" href="#">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link text-dark" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link text-dark" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link text-dark" href="#">Contact</a>
                 </li>
             </ul>
         </div>

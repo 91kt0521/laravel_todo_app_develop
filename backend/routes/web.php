@@ -30,3 +30,4 @@ Route::get('/', function () {
 });
 
 Route::get('/index', 'Sample\HelloController@index');
+Route::post('/index', 'Sample\HelloController@post');

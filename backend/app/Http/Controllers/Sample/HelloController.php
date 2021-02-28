@@ -8,11 +8,21 @@ use App\Http\Controllers\Controller;
 
 class HelloController extends Controller
 {
-    public function index ()
+    public function index (Request $request)
     {
-        $hello = 'Hello,World!';
-        $hello_array = ['Hello', 'こんにちは', 'ニーハオ'];
+        // var_dump($request->url());
+        // $message = '';
+        // return view('samples.index', compact('message'));
+        $datas = ['one', 'two', 'three', 'four', 'five'];
+        var_dump($datas);
+        return view('samples.index', compact('datas'));
+    }
 
-        return view('samples.index', compact('hello'));
+    public function post (Request $request)
+    {
+        $message = $request->name;
+        $val = $request->all();
+        var_dump($val);
+        return view('samples.index', compact('message'));
     }
 }
