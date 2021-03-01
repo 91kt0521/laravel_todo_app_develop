@@ -40,6 +40,8 @@
                 @endif
 
             @endfor
+
+            <p>Viewコンポーサー Value <br> 'view_message' = {{$view_message}}</p>
             <form method="POST" action="/index">
                 @csrf
                 <div class="mb-3 col-4">
