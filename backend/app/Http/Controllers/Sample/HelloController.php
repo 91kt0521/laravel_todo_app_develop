@@ -13,16 +13,18 @@ class HelloController extends Controller
         // var_dump($request->url());
         // $message = '';
         // return view('samples.index', compact('message'));
-        $datas = ['one', 'two', 'three', 'four', 'five'];
-        var_dump($datas);
-        return view('samples.index', compact('datas'));
+        // $datas = ['one', 'two', 'three', 'four', 'five'];
+        // var_dump($datas);
+        var_dump(2);
+
+        return view('samples.index', ['data' => $request->data]);
     }
 
     public function post (Request $request)
     {
         $message = $request->name;
         $val = $request->all();
-        var_dump($val);
+        // var_dump($val);
         return view('samples.index', compact('message'));
     }
 }

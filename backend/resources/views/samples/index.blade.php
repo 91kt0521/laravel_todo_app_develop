@@ -16,16 +16,10 @@
                 <h1>未入力です</h1>
             @endisset
 
-            <!-- 繰り返し処理&loop変数 -->
-            @isset ($datas)
-                @foreach ($datas as $data => $item)
-                    @if ($loop->first)
-                        <p>----ここから</p>
-                    @endif
-                        <p>NO,{{$loop->iteration}} . {{$item}}</p>
-                    @if ($loop->last)
-                        <p>----ここまで</p>
-                    @endif
+            <!-- ミドルウェア利用 -->
+            @isset ($data)
+                @foreach ($data as $item)
+                    <p>{{$item['name']}}  {{$item['mail']}}</p>
                 @endforeach
             @endisset
 
