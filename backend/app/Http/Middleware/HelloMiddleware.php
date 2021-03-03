@@ -16,7 +16,6 @@ class HelloMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        var_dump(1);
         $data = [
             ['name' => 'taro', 'mail'=> 'taro@test'],
             ['name' => 'hanako', 'mail'=> 'hanako@test'],

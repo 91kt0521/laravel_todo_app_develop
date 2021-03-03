@@ -30,8 +30,10 @@ Route::get('/', function () {
     return view('boot_template/index');
 });
 
-Route::get('/index', 'Sample\HelloController@index');
+Route::resource('/index', 'Sample\HelloController');
+
+//Route::get('/index', 'Sample\HelloController@index');
 // Route::get('/index', 'Sample\HelloController@index')
 //     ->middleware(HelloMiddleware::class);
 
-Route::post('/index', 'Sample\HelloController@post');
+//Route::post('/index', 'Sample\HelloController@post');

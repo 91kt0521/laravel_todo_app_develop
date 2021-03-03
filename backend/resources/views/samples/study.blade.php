@@ -46,31 +46,9 @@
 
     <!-- form用 -->
     <div class="container mt-5">
-        <div class="row g-3 mt-3">
-            <div class="col">
-                <input type="text" class="form-control" name="first_name" placeholder="姓" aria-label="First name">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" name="last_name" placeholder="名" aria-label="Last name">
-            </div>
-        </div>
-        <div class="form-check mt-3">
-            <input class="form-check-input" type="radio" name="job" id="job">
-            <label class="form-check-label" for="job">
-                会社員
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="job" id="job_2" checked>
-            <label class="form-check-label" for="job_2">
-                自営業
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="job" id="job_3" checked>
-            <label class="form-check-label" for="job_3">
-                学生
-            </label>
+        <div class="row g-3">
+            <a class=link-success href="/index">登録</a>
+            <a class=link-secondary href="/index/show">確認</a>
         </div>
     </div>
 
