@@ -12,11 +12,11 @@
         @endisset
 
         <!-- ミドルウェア利用 -->
-        @isset ($data)
+        <!-- @isset ($data)
             @foreach ($data as $item)
                 <p>{{$item['name']}}  {{$item['mail']}}</p>
             @endforeach
-        @endisset
+        @endisset -->
 
         @isset($message)
             <!-- 条件付き繰り返し処理 -->
@@ -54,9 +54,9 @@
             </div>
             <div class="mb-3 col-4">
                 <label for="inputmail" class="form-label">メールアドレス</label>
-                @error('mail')
-                    <p class=text-danger>{{$message}}</p>
-                @enderror
+                    @error('mail')
+                        <p class=text-danger>{{$message}}</p>
+                    @enderror
                 <input type="mail" class="form-control" id="inputmail" name="mail">
             </div>
             <div class="mb-3 form-check">

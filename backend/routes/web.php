@@ -31,6 +31,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/index', 'Sample\HelloController');
+Route::post('/index/find', 'Sample\HelloController@find');
 
 //Route::get('/index', 'Sample\HelloController@index');
 // Route::get('/index', 'Sample\HelloController@index')
