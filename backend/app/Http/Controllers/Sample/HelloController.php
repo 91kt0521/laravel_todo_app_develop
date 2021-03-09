@@ -37,6 +37,7 @@ class HelloController extends Controller
 
     public function find(Request $request)
     {
+        var_dump(111111);
         $findItems = Test::find($request->findId);
         return view('samples.show', ['findItems' => $findItems]);
     }
