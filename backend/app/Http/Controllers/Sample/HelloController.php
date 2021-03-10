@@ -31,14 +31,20 @@ class HelloController extends Controller
 
     public function show($id = NULL)
     {
-        $items = Test::all();
+        $items = Test::simplePaginate(2);
         return view('samples.show', ['items' => $items]);
     }
 
     public function find(Request $request)
     {
-        var_dump(111111);
+
         $findItems = Test::find($request->findId);
+
+        // $min = $findItems->age * 1;
+        // $max = $min + 5;
+        // $s = Test::ageLessThan($min)->first();
+        // dd($s);
+
         return view('samples.show', ['findItems' => $findItems]);
     }
 

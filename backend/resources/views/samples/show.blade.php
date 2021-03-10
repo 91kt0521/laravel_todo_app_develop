@@ -51,5 +51,8 @@
                 </tr>
             @endif
         </table>
-    </div>
+        @if (isset($items))
+            {{$items->links()}}
+        @endif
+</div>
 @endsection
