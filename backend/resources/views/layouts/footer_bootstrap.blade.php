@@ -1,7 +1,9 @@
 <!-- Footer -->
-<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+<footer class="footer mt-auto py-3 bg-dark">
     <div class="container text-center">
-        <small>Copyright &copy; Your Website</small>
+        <small class='text-light'>Copyright &copy; Your Website</small>
     </div>
 </footer>
 <!-- / Footer -->
+
+
