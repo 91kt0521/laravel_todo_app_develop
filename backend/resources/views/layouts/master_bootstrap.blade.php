@@ -11,33 +11,11 @@
     <!--Font Awesome5-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
-    <!--自作CSS -->
     <style type="text/css">
-        <!--
-        /*ここに調整CSS記述*/
-
-        /* Sticky Footer Classes */
-
         html,
         body {
             height: 100%;
         }
-
-        #page-content {
-            flex: 1 0 auto;
-        }
-
-        #sticky-footer {
-            flex-shrink: none;
-        }
-
-        /* Other Classes for Page Styling */
-
-        body {
-            background: #007bff;
-            background: linear-gradient(to right, #0062E6, #33AEFF);
-        }
-        -->
     </style>
 </head>
 <body class="d-flex flex-column">
