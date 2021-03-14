@@ -8,10 +8,24 @@
     <h1>TODOリスト</h1>
 </div>
 <div class="container mt-3">
+{{-- エラー表示 ここから --}}
+        @if ($errors->has('category'))
+            <p class="alert alert-danger">{{ $errors->first('category') }}</p>
+        @endif
+        @if ($errors->has('newTodo'))
+            <p class="alert alert-danger">{{ $errors->first('newTodo') }}</p>
+        @endif
+        @if ($errors->has('newDeadline'))
+            <p class="alert alert-danger">{{ $errors->first('newDeadline') }}</p>
+        @endif
+    {{-- エラー表示 ここまで --}}
+</div>
+<div class="container mt-3">
     <div class='container mt-2'>
         {!! Form::open(['route' => 'todo.store', 'method' => 'POST']) !!}
         {{ csrf_field() }}
         <div class='form-group mb-4'>
+            <h6>カテゴリ</h6>
             <div class="form-check form-check-inline">
                 {{Form::radio('category', '1', false, ['class'=>'form-check-input'])}}
                 {{Form::label('flexRadioDefault1', '勉強', ['class'=>'form-check-label'])}}
@@ -36,18 +50,6 @@
         </div>
         {!! Form::close() !!}
     </div>
-
-    {{-- エラー表示 ここから --}}
-        @if ($errors->has('category'))
-            <p class="alert alert-danger">{{ $errors->first('category') }}</p>
-        @endif
-        @if ($errors->has('newTodo'))
-            <p class="alert alert-danger">{{ $errors->first('newTodo') }}</p>
-        @endif
-        @if ($errors->has('newDeadline'))
-            <p class="alert alert-danger">{{ $errors->first('newDeadline') }}</p>
-        @endif
-    {{-- エラー表示 ここまで --}}
 </div>
 
 @endsection
