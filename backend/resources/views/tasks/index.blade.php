@@ -50,6 +50,29 @@
         </div>
         {!! Form::close() !!}
     </div>
+
+    <table class="table mt-2">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 15%;">カテゴリ</th>
+                <th scope="col" style="width: 60%;">TODO</th>
+                <th scope="col">期限</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($todos as $todo)
+                <tr>
+                    <td>{{ $todo->category_id }}</td>
+                    <th>{{ $todo->todo }}</th>
+                    <td>{{ $todo->deadline }}</td>
+                    <td><a href="" class="btn btn-primary">編集</td>
+                    <td>{{ Form::submit('削除',['class'=>"btn btn-danger"]) }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 
 @endsection

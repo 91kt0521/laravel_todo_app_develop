@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Task;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\todo;
 
 class TodoController extends Controller
 {
@@ -14,7 +15,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return view('tasks.index');
+        $todos = Todo::all();
+        return view('tasks.index', ['todos' => $todos]);
     }
 
     /**
@@ -37,10 +39,18 @@ class TodoController extends Controller
     {
         $request->validate([
             'category' => 'required',
-            'newTodo' => 'required|max100',
+            'newTodo' => 'required|max:100',
             'newDeadline' => ' nullable|after:"now"'
         ]);
-        return view('tasks.index');
+
+        // DBに保存する
+        Todo::create([
+            'category_id' => $request->category,
+            'todo' => $request->newTodo,
+            'deadline' => $request->newDeadline,
+        ]);
+
+        return redirect('task/todo');
     }
 
     /**
