@@ -26,3 +26,5 @@ Route::get('/', function () {
 });
 
 Route::get('/index', 'HelloController@index');
+
+Route::resource('/task/todo', 'Task\TodoController');
