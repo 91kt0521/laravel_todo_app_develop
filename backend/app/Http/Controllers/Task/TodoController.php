@@ -72,7 +72,8 @@ class TodoController extends Controller
      */
     public function edit($id)
     {
-        //
+        //画面表示
+        return view('tasks.edit');
     }
 
     /**

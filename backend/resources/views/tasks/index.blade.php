@@ -67,7 +67,7 @@
                     <td>{{ $todo->category_id }}</td>
                     <th>{{ $todo->todo }}</th>
                     <td>{{ $todo->deadline }}</td>
-                    <td><a href="" class="btn btn-primary">編集</td>
+                    <td><a href="{{ route('todo.edit', $todo->id) }}" class="btn btn-primary">編集</td>
                     <td>{{ Form::submit('削除',['class'=>"btn btn-danger"]) }}</td>
                 </tr>
             @endforeach
