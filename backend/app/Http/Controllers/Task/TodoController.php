@@ -98,8 +98,9 @@ class TodoController extends Controller
 
         $todo->todo = $request->updateTodo;
         $todo->deadline = $request->updateDeadline;
-
+        // 更新
         $todo->save();
+
         return redirect('task/todo');
     }
 
@@ -111,6 +112,9 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->delete();
+
+        return redirect('task/todo');
     }
 }
