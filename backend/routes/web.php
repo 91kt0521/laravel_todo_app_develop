@@ -21,8 +21,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+// laravelとvueと使用しタスクアプリを作成
 Route::get('/', function () {
-    return view('boot_template/index');
+    // return view('boot_template/index');
+    return view('app');
 });
 
 Route::get('/index', 'HelloController@index');
