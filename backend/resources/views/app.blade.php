@@ -14,9 +14,14 @@
 </head>
 <body>
 <div id="app">
-    <example-component></example-component>
+    <header-component></header-component>
 </div>
+
+<h1 id="test">aaaaa</h1>
 <!-- Scripts -->
-<script src="{{ mix('/js/app.js') }}" defer></script>
+<script>
+document.getElementById("test").textContent = '変更します'
+</script>
+<script src="{{ asset('/js/app.js') }}" defer></script>
 </body>
 </html>
