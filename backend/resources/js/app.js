@@ -5,11 +5,30 @@
  */
 
 // import 変数名 from "場所"
+import Vue from "vue";
+import VueRouter from "vue-router";
 import HeaderComponent from "./components/HeaderComponent";
+import TaskListComponent from "./components/TaskListComponent";
 
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+
+// Vue Routerはルーティングを制御するためのプラグイン
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+    mode: 'history',
+    // ルーティングが増える場合はここに以下に追加していく
+    routes: [
+        {
+            // pathにアクセスしたらコンポーネントを表示する(ルーティング名はnameに記載したもの)
+            path: '/tasks',
+            name: 'task.list',
+            component: TaskListComponent,
+        },
+    ]
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,6 +53,7 @@ Vue.component('header-component', HeaderComponent);
 
 const app = new Vue({
     el: '#app',
+    router
 });
 
 // document.getElementById("test").textContent = '変更します'

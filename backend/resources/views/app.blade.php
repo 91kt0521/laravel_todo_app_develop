@@ -15,6 +15,8 @@
 <body>
 <div id="app">
     <header-component></header-component>
+
+    <router-view></router-view>
 </div>
 
 <h1 id="test">aaaaa</h1>
