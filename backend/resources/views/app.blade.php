@@ -22,7 +22,7 @@
 <h1 id="test">aaaaa</h1>
 <!-- Scripts -->
 <script>
-document.getElementById("test").textContent = '変更します'
+document.getElementById("test").textContent = 'リロードすると404なります'
 </script>
 <script src="{{ asset('/js/app.js') }}" defer></script>
 </body>

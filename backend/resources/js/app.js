@@ -9,6 +9,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HeaderComponent from "./components/HeaderComponent";
 import TaskListComponent from "./components/TaskListComponent";
+import TaskShowComponent from "./components/TaskShowComponent";
 
 require('./bootstrap');
 
@@ -23,9 +24,20 @@ const router = new VueRouter({
     routes: [
         {
             // pathにアクセスしたらコンポーネントを表示する(ルーティング名はnameに記載したもの)
+            path: '/',
+            name: 'task',
+        },
+        {
+            // pathにアクセスしたらコンポーネントを表示する(ルーティング名はnameに記載したもの)
             path: '/tasks',
             name: 'task.list',
             component: TaskListComponent,
+        },
+        {
+            path: '/tasks/:taskId',
+            name: 'task.show',
+            component: TaskShowComponent,
+            props: true,
         },
     ]
 });
