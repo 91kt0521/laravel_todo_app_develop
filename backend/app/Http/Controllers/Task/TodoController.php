@@ -72,8 +72,11 @@ class TodoController extends Controller
      */
     public function edit($id)
     {
+        // 編集データを取得
+        $todos = Todo::find($id);
+
         //画面表示
-        return view('tasks.edit');
+        return view('tasks.edit', ['todo' => $todos]);
     }
 
     /**
@@ -85,7 +88,20 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // 更新バリデーション
+        $request->validate([
+            'updateTodo' => 'required|max:100',
+            'updateDeadline' => ' nullable|after:"now"'
+        ]);
+
+        $todo = Todo::find($id);
+
+        $todo->todo = $request->updateTodo;
+        $todo->deadline = $request->updateDeadline;
+        // 更新
+        $todo->save();
+
+        return redirect('task/todo');
     }
 
     /**
@@ -96,6 +112,9 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->delete();
+
+        return redirect('task/todo');
     }
 }

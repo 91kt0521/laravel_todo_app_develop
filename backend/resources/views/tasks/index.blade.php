@@ -68,7 +68,11 @@
                     <th>{{ $todo->todo }}</th>
                     <td>{{ $todo->deadline }}</td>
                     <td><a href="{{ route('todo.edit', $todo->id) }}" class="btn btn-primary">編集</td>
-                    <td>{{ Form::submit('削除',['class'=>"btn btn-danger"]) }}</td>
+                    {!! Form::open(['route' => ['todo.destroy', $todo->id], 'method' => 'POST' ]) !!}
+                    {{ csrf_field() }}
+                    {{ method_field('DELETE') }}
+                        <td>{{ Form::submit('削除',['class'=>"btn btn-danger"]) }}</td>
+                    {!! Form::close() !!}
                 </tr>
             @endforeach
         </tbody>

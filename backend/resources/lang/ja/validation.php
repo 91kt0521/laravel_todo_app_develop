@@ -151,8 +151,11 @@ return [
     */
 
     'attributes' => [
-        'todo'     => 'Todo',
-        'deadline' => '期限',
+        'category'     => 'カテゴリ',
+        'newTodo'     => 'Todo',
+        'newdeadline' => '期限',
+        'updateTodo'     => 'Todo',
+        'updateDeadline' => '期限',
     ],
 
 ];
