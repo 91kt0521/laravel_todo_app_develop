@@ -21,7 +21,7 @@ Route::get('/home', function () {
     return view('home');
 });
 
-// laravelとvueと使用しタスクアプリを作成
+// laravelとVue.jsと使用しタスクアプリを作成
 Route::get('/', function () {
     // return view('boot_template/index');
     return view('app');
@@ -29,4 +29,5 @@ Route::get('/', function () {
 
 Route::get('/index', 'HelloController@index');
 
+// Laravelを使用したTodoアプリ
 Route::resource('/task/todo', 'Task\TodoController');
